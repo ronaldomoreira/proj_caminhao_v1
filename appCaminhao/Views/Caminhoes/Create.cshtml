@@ -1,11 +1,12 @@
 ﻿@model appCaminhao.Models.CaminhaoViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Novo caminhão";
 }
 
 <h3><a asp-area="" asp-controller="Caminhoes" asp-action="Index"><i class="fa-solid fa-truck"></i> Caminhões</a>/Novo</h3>
 <hr />
+<h4>Caminhão</h4>
 <div class="row">
     <div class="col-md-4">
         <form asp-area="" asp-controller="Caminhoes" asp-action="Create" method="post" enctype="multipart/form-data">
@@ -36,13 +37,11 @@
             </div>
             <div class="form-group">
                 <hr />
-                <button type="submit" value="Salvar" class="btn btn-primary"><i class="fa-solid fa-floppy-disk fa-lg"></i> Salvar</button>
+                <button type="submit" value="Salvar" class="btn btn-primary"><i class="fa-solid fa-floppy-disk fa-lg"></i> Salvar</button> | 
+                <a asp-area="" asp-controller="Caminhoes" asp-action="Index"><i class="fa-solid fa-arrow-rotate-left"></i> Voltar para a lista</a>
             </div>
         </form>
     </div>
-</div>
-<div class="">
-    <a asp-area="" asp-controller="Caminhoes" asp-action="Index">Voltar para a  lista</a>
 </div>
 
 @section Scripts {

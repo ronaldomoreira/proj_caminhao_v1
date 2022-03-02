@@ -43,9 +43,9 @@
                 @Html.DisplayFor(modelItem => item.AnoModelo)
             </td>
             <td>
-                <a asp-area="" asp-controller="Caminhoes" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-area="" asp-controller="Caminhoes" asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-area="" asp-controller="Caminhoes" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-area="" asp-controller="Caminhoes" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i> Editar</a> |
+                <a asp-area="" asp-controller="Caminhoes" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-file-lines"></i> Detalhes</a> |
+                <a asp-area="" asp-controller="Caminhoes" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash-can"></i> Deletar</a>
             </td>
         </tr>
 }

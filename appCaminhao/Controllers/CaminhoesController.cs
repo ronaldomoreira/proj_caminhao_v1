@@ -59,7 +59,7 @@ namespace appCaminhao.Controllers
             {
                 new SelectListItem { Text = "Volvo", Value = "Volvo" },
                 new SelectListItem { Text = "Scania", Value = "Scania" },
-                new SelectListItem { Text = "Scania", Value = "Ford" },
+                new SelectListItem { Text = "Ford", Value = "Ford" },
             }, "Value", "Text");
         }
 
@@ -154,6 +154,9 @@ namespace appCaminhao.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(long? id)
         {
+            ViewBag.listaFabircantes = ListaFabricantes();
+            ViewBag.listaModelos = ListaModelos();
+
             if (id == null)
             {
                 return NotFound();
@@ -174,6 +177,9 @@ namespace appCaminhao.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(long id, [Bind("Id,Fabricante,Modelo,AnoFabricacao,AnoModelo")] CaminhaoViewModel caminhaoViewModel)
         {
+            ViewBag.listaFabircantes = ListaFabricantes();
+            ViewBag.listaModelos = ListaModelos();
+
             if (id != caminhaoViewModel.Id)
             {
                 return NotFound();
