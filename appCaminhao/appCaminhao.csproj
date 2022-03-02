@@ -19,4 +19,14 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessSevice\BusinessSevice.csproj" />
+    <ProjectReference Include="..\DomainApp\DomainApp.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+  </ItemGroup>
+
 </Project>
