@@ -1,0 +1,53 @@
+﻿@model IEnumerable<appCaminhao.Models.CaminhaoViewModel>
+
+@{
+    ViewData["Title"] = "Cadastro caminhões";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-area="" asp-controller="Caminhoes" asp-action="Create"><i class="fa-solid fa-truck fa-xl"></i> Novo caminhão</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fabricante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoFabricacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoModelo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fabricante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoFabricacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoModelo)
+            </td>
+            <td>
+                <a asp-area="" asp-controller="Caminhoes" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-area="" asp-controller="Caminhoes" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-area="" asp-controller="Caminhoes" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

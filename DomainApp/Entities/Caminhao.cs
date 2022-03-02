@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace DomainApp.Entities
 {
+    [Table("Caminhao")]
+    [Serializable]
     public class Caminhao
     {
         public Caminhao()

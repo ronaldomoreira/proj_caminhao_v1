@@ -47,47 +47,47 @@ namespace BusinessSevice.Base
         }
         #endregion
 
-        public async Task<TEntity?> GetById(long? id)
+        public virtual async Task<TEntity?> GetById(long? id)
         {
             return await _repository.GetById(id);
         }
 
-        public async Task<IEnumerable<TEntity>> GetAll()
+        public virtual async Task<IEnumerable<TEntity>> GetAll()
         {
             return await _repository.GetAll();
         }
 
-        public async Task<TEntity?> Add(TEntity item)
+        public virtual async Task<TEntity?> Add(TEntity item)
         {
             return await _repository.Add(item);
         }
 
-        public async Task AddRange(IEnumerable<TEntity> itens)
+        public virtual async Task AddRange(IEnumerable<TEntity> itens)
         {
             await _repository.AddRange(itens);
         }
 
-        public void Update(TEntity item)
+        public virtual void Update(TEntity item)
         {
             _repository.Update(item);
         }
 
-        public async Task Remove(long? id)
+        public virtual async Task Remove(long? id)
         {
             await _repository.Remove(id);                
         }
 
-        public async Task Remove(TEntity item)
+        public virtual async Task Remove(TEntity item)
         {
             await _repository.Remove(item);
         }
 
-        public void RemoveRange(IEnumerable<TEntity> itens)
+        public virtual void RemoveRange(IEnumerable<TEntity> itens)
         {
             _repository.RemoveRange(itens);
         }
 
-        public async Task<int> SaveChangesAsync()
+        public virtual async Task<int> SaveChangesAsync()
         {
             return await _repository.SaveChangesAsync();
         }

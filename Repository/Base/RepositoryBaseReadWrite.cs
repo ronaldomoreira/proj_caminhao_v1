@@ -16,10 +16,8 @@ namespace Repository.Base
 
         public RepositoryBaseReadWrite(AppMainDbContext context)
         {
-            //
             _context = context;
             _dbSet = _context.Set<TEntity>();
-
         }
 
         #region IDisposable Support
@@ -54,7 +52,7 @@ namespace Repository.Base
 
         public async Task<IEnumerable<TEntity>> GetAll()
         {
-            List<TEntity> listEntity;
+            List<TEntity> listEntity = new();
 
             try
             {
@@ -62,7 +60,7 @@ namespace Repository.Base
             }
             catch (Exception)
             {
-                throw;
+                //throw;
             }
 
             return listEntity;

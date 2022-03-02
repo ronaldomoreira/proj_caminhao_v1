@@ -9,10 +9,11 @@ namespace DomainApp.Interfaces
 {
     public interface ICaminhaoBusinessService: IBusinessServiceBase<Caminhao>
     {
+        bool ValidarDifAnos(int anoModelo, int anoFabricacao);
+
         IRepositoryCaminhao RepositoryCaminhao
         {
             get;
         }
-
     }
 }

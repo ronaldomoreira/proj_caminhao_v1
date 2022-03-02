@@ -19,53 +19,5 @@ namespace Repository
             _context = context;
 
         }
-
-
-
-        public Caminhao Add(Caminhao item)
-        {
-            
-            throw new NotImplementedException();
-        }
-
-        public void AddRange(IEnumerable<Caminhao> itens)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Caminhao> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Caminhao GetById(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(Caminhao item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveRange(IEnumerable<Caminhao> itens)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Caminhao item)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
