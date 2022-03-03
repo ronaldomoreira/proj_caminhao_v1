@@ -35,9 +35,19 @@ namespace BusinessSevice
             if (!ValidarDifAnos(item.AnoModelo, item.AnoFabricacao))
             {
                 throw new Exception("Ano de fabricação e do modelo, devem ser iguais, ou no máximo ter uma diferença de 1 ano.");
-
             }  
+
             return base.Add(item);  
+        }
+
+        public override void Update(Caminhao item)
+        {
+            if (!ValidarDifAnos(item.AnoModelo, item.AnoFabricacao))
+            {
+                throw new Exception("Ano de fabricação e do modelo, devem ser iguais, ou no máximo ter uma diferença de 1 ano.");
+            }
+
+            base.Update(item);
         }
     }
 }
